@@ -1,0 +1,34 @@
+.container {
+  max-width: 900px;       
+  margin: 0 auto;        
+  padding: 0 20px;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;           
+    background-color: #7079ab;
+    color: rgb(0, 0, 0);
+    display: flex;
+    z-index: 1000;               
+}
+
+header p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.center-text {
+  text-align: center;
+}

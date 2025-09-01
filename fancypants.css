@@ -70,3 +70,19 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.credits {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.credits img {
+  width: 300px;
+  height: auto;
+  z-index: 5;
+}
+
+.credits text {
+  font-size: 15px;
+}

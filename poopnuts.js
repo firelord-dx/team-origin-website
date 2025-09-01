@@ -31,7 +31,9 @@ function showPage(daPage) {
         }
 }
 
-window.onload = () => showPage('home');
+document.addEventListener('DOMContentLoaded', function () {
+    showPage('home');
+});
 
 //fancy shit as you scroll down and load more elements
 document.addEventListener('DOMContentLoaded', function () {

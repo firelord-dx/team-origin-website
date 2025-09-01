@@ -2,13 +2,115 @@
 <html>
     <head>
         <title>Home - Team Origin</title>
+        <link rel="stylesheet" href="fancypants.css">
     </head>
     <body>
-        <h1>THIS WAS JUST MADE FOR BLUESKY</h1>
-        <p>this will be an actual website... eventually</p>
-        <img src="1271710086787633274.png" alt="who put you on this planet?">
+        <header>
+            <div class="container">
+                <p>Team Origin</p>
+                <nav>
+                    <a href="#" onclick="showPage('home')">Home</a>
+                    <a href="#" onclick="showPage('projects')">Projects</a>
+                    <a href="#" onclick="showPage('team')">Team</a>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div id="home" class="page">
+                <div class="trans-in">
+                    <h1 class="center-text">team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                </div>
+                <div class="trans-in">
+                    <h1 class="center-text">team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                    <h1>team oregon</h1>
+                </div>
+            </div>
+            <div id="projects" class="page" style="display:none;">
+                <div class="trans-in">
+                    <h1 style="text-align: center;">ballman beatdown :D</h1>
+                </div>
+            </div>
+            <div id="team" class="page" style="display:none;">
+                <div class="trans-in">
+                    <h1 style="text-align: center;">gagdet</h1>
+                    <h1 style="text-align: center;">firelord</h1>
+                    <h1 style="text-align: center;">computer terminal</h1>
+                </div>
+            </div>
+        </div>
 
-        <p>oh no it's jeff the killer!</p>
-        <p>i'm going to jeff the kill you</p>
+        <script>
+            //For the header buttons
+            var curPage = '';
+            
+            function showPage(daPage) {
+                if (curPage == daPage)
+                    return;
+    
+                const pages = document.querySelectorAll('.page');
+                curPage = daPage;
+
+                pages.forEach(page => {
+                    page.style.display = 'none';
+
+                    page.querySelectorAll('.trans-in').forEach(e => {
+                        e.classList.remove('visible');
+                    });
+                });
+
+                document.getElementById(daPage).style.display = 'block';
+
+                switch (daPage){
+                    case 'home':
+                        document.title = "Home - Team Origin";
+                        break;
+                    case 'projects':
+                        document.title = "Projects - Team Origin";
+                        break;
+                    case 'team':
+                        document.title = "Team - Team Origin";
+                        break;
+                }
+            }
+
+            window.onload = () => showPage('home');
+
+            //fancy shit as you scroll down and load more elements
+            document.addEventListener('DOMContentLoaded', function () {
+                const elements = document.querySelectorAll('.trans-in');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) 
+                        {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                threshold: 0.1
+                });
+
+                elements.forEach(e => observer.observe(e));
+            });
+        </script>
     </body>
 </html>

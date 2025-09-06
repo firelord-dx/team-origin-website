@@ -1,3 +1,18 @@
+@font-face {
+  font-family: FuzzyBubbles;
+  src: url(FuzzyBubbles-Regular.ttf);
+}
+
+@font-face {
+  font-family: FuzzyBubbles;
+  src: url(FuzzyBubbles-Bold.ttf);
+  font-weight: bold;
+}
+
+div {
+  font-family: FuzzyBubbles;
+}
+
 .container {
   max-width: 900px;       
   margin: 0 auto;        
@@ -33,18 +48,98 @@ header p {
   text-align: center;
 }
 
+nav {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+}
+
+nav a {
+    color: Black;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.left-sidebar-nav {
+  position: fixed;
+  top: 80px; 
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding: 20px;
+  width: 150px;
+  height: calc(100% - pxpx);
+}
+
+.left-sidebar-nav a {
+  font-family: FuzzyBubbles;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
+.left-sidebar-nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding-top: 90px;
+  padding-left: 250px; 
+  padding-right: 470px;
+}
+
+.right-sidebar-nav {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: flex-end;    
+}
+
+.right-sidebar-nav img{
+  width: 450px;
+  height: auto;
+}
+
 html {
   overflow-y: scroll;
 }
 
 .trans-in {
   opacity: 0;
-  transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   will-change: opacity, transform;
 }
 
-.trans-in.visible {
+.from-left {
+  transform: translateX(-20px);
+}
+
+.from-top {
+  transform: translateY(20px);
+}
+
+.from-right {
+  transform: translateX(20px);
+}
+
+.from-bottom {
+  transform: translateY(-20px);
+}
+
+.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0) translateY(0);
 }

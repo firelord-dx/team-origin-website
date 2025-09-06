@@ -19,7 +19,9 @@ function showPage(daPage) {
     document.getElementById(daPage).style.display = 'block';
 }
 
-window.onload = () => showPage('overview');
+document.addEventListener('DOMContentLoaded', function () {
+    showPage('overview');
+});
 
 //fancy shit as you scroll down and load more elements
 document.addEventListener('DOMContentLoaded', function () {

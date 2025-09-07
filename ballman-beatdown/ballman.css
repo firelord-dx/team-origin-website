@@ -1,3 +1,9 @@
+html {
+  overflow-y: scroll;
+}
+
+/* font */
+
 @font-face {
   font-family: FuzzyBubbles;
   src: url(FuzzyBubbles-Regular.ttf);
@@ -11,6 +17,15 @@
 
 div {
   font-family: FuzzyBubbles;
+}
+
+/* actual page stuff */
+
+body {
+  background-color: #2f00ff;
+  background-image: url(img/checker.png);
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 .container {
@@ -64,6 +79,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.content {
+  padding-top: 90px;
+  padding-left: 250px; 
+  padding-right: 470px;
+}
+
+/* sidebars */
+
 .left-sidebar-nav {
   position: fixed;
   top: 80px; 
@@ -89,12 +112,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.content {
-  padding-top: 90px;
-  padding-left: 250px; 
-  padding-right: 470px;
-}
-
 .right-sidebar-nav {
   position: fixed;
   top: 80px;
@@ -113,9 +130,7 @@ nav a:hover {
   height: auto;
 }
 
-html {
-  overflow-y: scroll;
-}
+/* transformations */
 
 .trans-in {
   opacity: 0;
@@ -128,7 +143,7 @@ html {
 }
 
 .from-top {
-  transform: translateY(20px);
+  transform: translateY(-20px);
 }
 
 .from-right {
@@ -136,10 +151,62 @@ html {
 }
 
 .from-bottom {
-  transform: translateY(-20px);
+  transform: translateY(20px);
 }
 
 .visible {
   opacity: 1;
   transform: translateX(0) translateY(0);
+}
+
+/* devlog posts */
+
+.devlog-content {
+  padding-top: 90px;
+  padding-left: 250px; 
+}
+
+.post {
+  background-color: #6259e4;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.post-body img {
+  margin: 10px 0;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.post-body h1, .post-body h2, .post-body h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.post-body strong {
+  font-weight: bold;
+}
+
+.author-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author-avatar {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;  
+  object-fit: cover;        
+  margin-right: 10px;
+  border: 2px solid white;   
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
 }

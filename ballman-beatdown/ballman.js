@@ -110,15 +110,15 @@ function coolMarkdowns(text)
 
     return text
      .replace(/^### (.*)$/gim, '<h3>$1</h3>')
-     .replace(/^## (.*)$/gim, '<h2>$1</h2>')    
+     .replace(/^## (.*)$/gim, '<h2>$1</h2>')
      .replace(/^# (.*)$/gim, '<h1>$1</h1>')
 
-     .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>') // **bold**
+     .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
 
      .replace(/\\n/g, '<br>')
 
      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1">')
-     .replace(/@\[video\]\((.*?)\)/gim, '<video controls src="$1"></video>'); 
+     .replace(/@\[video\]\((.*?)\)/gim, '<video controls src="$1"></video>');
 }
 
 async function loadPosts()
@@ -142,7 +142,8 @@ async function loadPosts()
 
         const markdownStuff = coolMarkdowns(p.content);
 
-        div.innerHTML = `<div class="author-meta">
+        div.innerHTML = `<div class="post-date">${p.date}</div>
+                        <div class="author-meta">
                             <img src="img/${p.author.toLowerCase()}.png" class="author-avatar">
                             <span class="author-name">${a}</span>
                         </div>

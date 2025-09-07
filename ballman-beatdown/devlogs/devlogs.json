@@ -1,14 +1,20 @@
 [
     {
-        "date": "2025-01-01",
+        "date": "September 6th, 2025",
         "author": "FireLordDX",
         "title": "test post",
         "content": "my **balls** itch\n## lol"
     },
     {
-        "date": "2025-01-02",
+        "date": "September 6th, 2025",
         "author": "GadgetChrome",
         "title": "test post 2",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "date": "September 7th, 2025",
+        "author": "TerminalAngst",
+        "title": "test post 3",
+        "content": "i'm \n### really \nshort"
     }
 ]
